@@ -1,0 +1,88 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #ececec;
+}
+
+/* Title */
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Chessboard Styling */
+#chessboard {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  width: 1000px;
+  height: 1000px;
+  border: 10px solid black;
+}
+
+.square {
+  width: 125px;
+  height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square.light {
+  background-color: #f0d9b5;
+}
+
+.square.dark {
+  background-color: #b58863;
+}
+
+/* Chess Piece Styling */
+.square img {
+  width: 80%;
+  height: 60%;
+  cursor: pointer;
+}
+div.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+.highlight {
+  outline: 3px solid yellow;
+}
+#chessboard-container {
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  perspective: 1000px; /* For a 3D effect if needed */
+}
+
+#chessboard {
+  width: 1000px;
+  height: 1000px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  transform-origin: center; /* Rotates around the center */
+  transition: transform 1s ease-in-out; /* Smooth rotation */
+}
+#rotate-button {
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: block;
+}
+
+#rotate-button:hover {
+  background-color: #45a049;
+}
+
